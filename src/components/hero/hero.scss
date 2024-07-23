@@ -1,5 +1,7 @@
 .hero {
-  height: calc(100vh - 100px);
+  // height: calc(100vh - 100px);
+  height: 100vh;
+  // margin-top: 5vh;
   overflow: hidden;
   // background: linear-gradient(180deg, #0c0c1d, #111132);
   background: #84a98c;
@@ -9,47 +11,48 @@
     max-width: 80vw;
     height: 100%;
     margin: auto;
+    margin-left: 12vw;
+    margin-top: 5vh;
     z-index: 99;
 
-    .textContainer{
-        height: 100%;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 40px;
+    .textContainer {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
 
-        h2{
-            font-size: 30px;
-            letter-spacing: 10px;
-            color: #dad7cd;
+      h2 {
+        font-size: 30px;
+        letter-spacing: 10px;
+        color: #dad7cd;
+      }
+
+      h1 {
+        font-size: 88px;
+        color: #dad7cd;
+      }
+
+      .buttons {
+        z-index: 99;
+
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          margin-right: 20px;
+          font-weight: 300;
+          cursor: pointer;
+          // z-index: 99;
         }
+      }
 
-        h1{
-            font-size: 88px;
-            color: #dad7cd;
-        }
-
-        .buttons{
-          z-index: 99;
-
-
-            button{
-                padding: 20px;
-                border: 1px solid white;
-                border-radius: 10px;
-                background-color: transparent;
-                color: white;
-                margin-right: 20px;
-                font-weight: 300;
-                cursor: pointer;
-                // z-index: 99;
-            }
-        }
-
-        img{
-            width: 50px;
-        }
+      img {
+        width: 50px;
+      }
     }
   }
 
@@ -60,17 +63,24 @@
     right: 0;
     bottom: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     z-index: 99;
+    gap: 50px;
+    margin-right: 25vh;
+    padding-top: 15vh;
+    margin-bottom: 10vh;
 
     img {
-      height: 75vh;
-      width: 75vh;
-      margin-bottom: 0;
+      height: 150px;
+      width: 150px;
+    }
+    .githubhero {
+      height: 115px;
+      width: 115px;
     }
   }
 
-  .slidingTextContainer{
+  .slidingTextContainer {
     position: absolute;
     font-size: 50vh;
     bottom: -120px;

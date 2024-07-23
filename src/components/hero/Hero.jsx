@@ -34,7 +34,7 @@ const sliderVariants = {
     transition: {
       duration: 20,
       repeat: Infinity,
-      repeatType: 'mirror',
+      repeatType: "mirror",
     },
   },
 };
@@ -52,10 +52,16 @@ function Hero() {
           <motion.h2 variants={textVariants}>KARTHEESAN</motion.h2>
           <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants} whileHover={{ scale: 1.051 }}>
+            <motion.button
+              variants={textVariants}
+              whileHover={{ scale: 1.051 }}
+            >
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants} whileHover={{ scale: 1.051 }}>
+            <motion.button
+              variants={textVariants}
+              whileHover={{ scale: 1.051 }}
+            >
               Contact me
             </motion.button>
           </motion.div>
@@ -75,7 +81,30 @@ function Hero() {
       >
         Hello There
       </motion.div>
-      <div className="imageContainer">{/* <img src="" alt="" /> */}</div>
+      <div className="imageContainer">
+        <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank">
+          <motion.img
+            src="/linkedin-svg.svg"
+            alt="linkedin"
+            whileHover={{ scale: 1.1 }}
+          />
+        </a>
+        <a href="https://github.com/kartheesan05" target="_blank">
+          <motion.img
+            className="githubhero"
+            src="/gh-svg.svg"
+            alt="github"
+            whileHover={{ scale: 1.1 }}
+          />
+        </a>
+        <a href="https://www.instagram.com/kxrtz_10/" target="_blank">
+          <motion.img
+            src="/instagram-svg.svg"
+            alt="instagram"
+            whileHover={{ scale: 1.1 }}
+          />
+        </a>
+      </div>
     </motion.div>
   );
 }
