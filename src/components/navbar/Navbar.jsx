@@ -17,30 +17,28 @@ function Navbar() {
           Kartheesan
         </motion.span>
         <div className="social">
-          {/* <a href="#">
+          <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank">
             <motion.img
-              src="/facebook.png"
-              alt=""
-              whileHover={{ scale: 1.2}}
-            />
-          </a> */}
-          <a href="#">
-            <motion.img
-              src="/instagram.png"
+              src="/linkedin-svg.svg"
               alt=""
               whileHover={{ scale: 1.2 }}
             />
           </a>
-          <a href="#">
-            <motion.img src="/youtube.png" alt="" whileHover={{ scale: 1.2 }} />
-          </a>
-          {/* <a href="#">
+          <a href="https://github.com/kartheesan05" target="_blank">
             <motion.img
-              src="/dribbble.png"
+              src="/gh-svg.svg"
+              alt=""
+              whileHover={{ scale: 1.2 }}
+              id="github"
+            />
+          </a>
+          <a href="https://www.instagram.com/kxrtz_10/" target="_blank">
+            <motion.img
+              src="/instagram-svg.svg"
               alt=""
               whileHover={{ scale: 1.2 }}
             />
-          </a> */}
+          </a>
         </div>
       </div>
     </div>
