@@ -1,7 +1,8 @@
 .hero {
   height: calc(100vh - 100px);
   overflow: hidden;
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+  // background: linear-gradient(180deg, #0c0c1d, #111132);
+  background: #84a98c;
   position: relative;
 
   .wrapper {
@@ -21,11 +22,12 @@
         h2{
             font-size: 30px;
             letter-spacing: 10px;
-            color: rebeccapurple;
+            color: #dad7cd;
         }
 
         h1{
             font-size: 88px;
+            color: #dad7cd;
         }
 
         .buttons{
@@ -73,7 +75,7 @@
     font-size: 50vh;
     bottom: -120px;
     white-space: nowrap;
-    color: #ffffff09;
+    color: #ffffff3b;
     // font-weight: bold;
     width: 50%;
     z-index: 0;

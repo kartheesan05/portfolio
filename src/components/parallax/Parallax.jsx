@@ -19,10 +19,10 @@ function Parallax({ type }) {
       className="parallax"
       ref={ref}
       style={{
-        background:
-          type === "about"
-            ? "linear-gradient(180deg, #111132, #0c0c1d)"
-            : "linear-gradient(180deg, #111132, #505064)",
+        background: "linear-gradient(180deg, #84a98c, #0c0c1d)",
+        // type === "about"
+        //   ? "linear-gradient(180deg, #84a98c, #0c0c1d)"
+        //   : "linear-gradient(180deg, #111132, #505064)",
       }}
     >
       <motion.h1 style={{ y: yText }}>
