@@ -1,9 +1,18 @@
+import Image from './Carousel'
 import './project.scss'
 
 function Project() {
   return (
-    <h1>Project</h1>
-  )
+    <>
+      <div className="carouselcs">
+        <Image />
+
+        <a href="http://yc.kartheesan.online" className="custom-link-button">
+          Live Demo
+        </a>
+      </div>
+    </>
+  );
 }
 
 export default Project

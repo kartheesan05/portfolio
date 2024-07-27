@@ -1,0 +1,41 @@
+.carouselcs {
+  padding-top: 170px;
+  padding-left: 40px; // padding-bottom: 20vh;
+  display: flex;
+  //   align-items:x
+  justify-content: center;
+  gap: 40px;
+//   width: 640px;
+}
+.limitwidth{
+    width: 640px;
+}
+
+/* Define styles for the custom link button */
+.custom-link-button {
+  display: inline-block;
+  background-color: #588157;
+  color: #fff; /* Set the text color to white for contrast */
+  border: none;
+  height: 60px;
+  width: 200px;
+  border-radius: 4px; /* Add some border-radius if needed */
+  padding: 8px 16px; /* Adjust padding as necessary */
+  font-size: 20px; /* Adjust font size as necessary */
+  text-align: center;
+  text-decoration: none; /* Remove the underline from the link */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.custom-link-button:hover {
+  background-color: #4d714d; /* Slightly darker shade for hover effect */
+}
+
+.custom-link-button:active {
+  background-color: #446244; /* Even darker shade for active state */
+}
+
+.custom-link-button:focus {
+  outline: 2px solid #7fa97f; /* Lighter outline color for focus state */
+}
