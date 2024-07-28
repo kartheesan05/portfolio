@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Image = () => (
   <div className="limitwidth">
-    <Carousel autoPlay={true} dynamicHeight={true} stopOnHover infiniteLoop>
+    <Carousel autoPlay={true} dynamicHeight={false} stopOnHover infiniteLoop>
       <div>
         <img src="/yc1.png" />
       </div>

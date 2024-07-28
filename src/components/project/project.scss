@@ -1,41 +1,63 @@
+@use '@material/button/button';
+@use '@material/theme/theme';
+
 .carouselcs {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  //   width: 640px;
+  gap: 40px;
+  .buttoncs {
+    
+    // height: 20px;
+    // justify-content: center;
+    display: flex;
+    z-index: 300;
+    background-color: #588157;
+    
+  }
+}
+.limitwidth {
+  width: 640px;
   padding-top: 170px;
   padding-left: 40px; // padding-bottom: 20vh;
   display: flex;
   //   align-items:x
   justify-content: center;
   gap: 40px;
-//   width: 640px;
-}
-.limitwidth{
-    width: 640px;
 }
 
-/* Define styles for the custom link button */
-.custom-link-button {
-  display: inline-block;
-  background-color: #588157;
-  color: #fff; /* Set the text color to white for contrast */
+// Define the primary color
+$primary-color: #588157;
+
+// Import Material components
+
+
+// Create a theme
+.theme {
+  --md-sys-color-primary: #{$primary-color};
+}
+
+// Apply the theme to the button
+.my-button {
+  @include button.core-styles;
+
+  background-color: var(--md-sys-color-primary);
+  color: #fff; // Set the text color to white for contrast
   border: none;
-  height: 60px;
-  width: 200px;
-  border-radius: 4px; /* Add some border-radius if needed */
-  padding: 8px 16px; /* Adjust padding as necessary */
-  font-size: 20px; /* Adjust font size as necessary */
-  text-align: center;
-  text-decoration: none; /* Remove the underline from the link */
-  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
+  border-radius: 4px; // Add some border-radius if needed
+  padding: 8px 16px; // Adjust padding as necessary
+  font-size: 14px; // Adjust font size as necessary
 
-.custom-link-button:hover {
-  background-color: #4d714d; /* Slightly darker shade for hover effect */
-}
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
 
-.custom-link-button:active {
-  background-color: #446244; /* Even darker shade for active state */
-}
+  &:active {
+    background-color: darken($primary-color, 15%);
+  }
 
-.custom-link-button:focus {
-  outline: 2px solid #7fa97f; /* Lighter outline color for focus state */
+  &:focus {
+    outline: 2px solid lighten($primary-color, 20%);
+  }
 }

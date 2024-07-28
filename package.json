@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material/button": "^14.0.0",
+    "@material/theme": "^14.0.0",
     "antd": "^5.19.3",
     "framer-motion": "10.16.4",
     "react": "18.2.0",
