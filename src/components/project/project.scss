@@ -1,26 +1,39 @@
-@use '@material/button/button';
-@use '@material/theme/theme';
+@use "@material/button/button";
+@use "@material/theme/theme";
+
+.projecth1{
+  text-align: center;
+  font-size: 60px;
+  padding-top: 60px;
+}
 
 .carouselcs {
   display: flex;
   align-items: center;
+  padding-bottom: 110px;
+  height: calc(100vh - 90px);
   // justify-content: center;
   //   width: 640px;
   gap: 40px;
+
+  p{
+    font-size: larger;
+    padding-right: 40px;
+  }
+
   .buttoncs {
-    
     // height: 20px;
     // justify-content: center;
     display: flex;
     z-index: 300;
     background-color: #588157;
-    
   }
 }
 .limitwidth {
   width: 640px;
-  padding-top: 170px;
-  padding-left: 40px; // padding-bottom: 20vh;
+  // padding-top: 170px;
+  padding-left: 40px;
+  // padding-bottom: 20vh;
   display: flex;
   //   align-items:x
   justify-content: center;
@@ -31,7 +44,6 @@
 $primary-color: #588157;
 
 // Import Material components
-
 
 // Create a theme
 .theme {
