@@ -37,18 +37,29 @@
 
       .buttons {
         z-index: 99;
+        // gap: 1000px;
 
         button {
           padding: 20px;
-          border: 1px solid white;
-          border-radius: 10px;
+          // border: 1px solid white;
+          border: #dad7cd;
+          border-radius: 15px;
           background-color: transparent;
-          color: white;
-          margin-right: 20px;
-          font-weight: 300;
+          // color: white;
+          color: #588157;
+          background-color: #dad7cd;
+          margin-right: 35px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          font-weight: 600;
           cursor: pointer;
+          // transition: 100ms;
+
           // z-index: 99;
         }
+
+        // button:hover {
+        //   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+        // }
       }
 
       img {

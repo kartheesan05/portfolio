@@ -2,6 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./hero.scss";
 
+const handleScrollToElement = (targetId) => {
+  const element = document.getElementById(targetId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const textVariants = {
   initial: {
     x: -500,
@@ -55,12 +62,14 @@ function Hero() {
             <motion.button
               variants={textVariants}
               whileHover={{ scale: 1.051 }}
+              onClick={() => handleScrollToElement("Projects")}
             >
               See the Latest Works
             </motion.button>
             <motion.button
               variants={textVariants}
               whileHover={{ scale: 1.051 }}
+              onClick={() => handleScrollToElement("Contact")}
             >
               Contact me
             </motion.button>
