@@ -14,18 +14,21 @@ function App() {
         <Sidebar />
         <Hero />
       </section>
-      <section id="About">
+      {/* <section>
         <Parallax type="about" />
+      </section> */}
+      <section id="About">
+        <About />
       </section>
-      <section><About/></section>
-      <section id="Projects">
+      {/* <section>
         <Parallax type="projects" />
+      </section> */}
+      <section id="Projects">
+        <Project />
       </section>
-      <section><Project/></section>
       {/* <section><Project/></section>
       <section><Project/></section> */}
       <section id="Contact">Contact</section>
-      
     </div>
   );
 }
