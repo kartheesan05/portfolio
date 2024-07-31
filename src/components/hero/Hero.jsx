@@ -49,38 +49,65 @@ const sliderVariants = {
 function Hero() {
   return (
     <motion.div className="hero">
-      <div className="wrapper">
-        <motion.div
-          className="textContainer"
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
-        >
-          <motion.h2 variants={textVariants}>KARTHEESAN</motion.h2>
-          <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
-          <motion.div className="buttons" variants={textVariants}>
-            <motion.button
-              variants={textVariants}
-              whileHover={{ scale: 1.051 }}
-              onClick={() => handleScrollToElement("Projects")}
-            >
-              See the Latest Works
-            </motion.button>
-            <motion.button
-              variants={textVariants}
-              whileHover={{ scale: 1.051 }}
-              onClick={() => handleScrollToElement("Contact")}
-            >
-              Contact me
-            </motion.button>
-          </motion.div>
-          <motion.img
+      <div className="maincontent">
+        
+          <motion.div
+            className="textContainer"
             variants={textVariants}
-            animate="scrollButton"
-            src="/scroll.png"
-            alt=""
-          />
-        </motion.div>
+            initial="initial"
+            animate="animate"
+          >
+            <motion.h2 variants={textVariants}>KARTHEESAN</motion.h2>
+            <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
+            <motion.div className="buttons" variants={textVariants}>
+              <motion.button
+                variants={textVariants}
+                whileHover={{ scale: 1.051 }}
+                onClick={() => handleScrollToElement("Projects")}
+              >
+                See the Latest Works
+              </motion.button>
+              <motion.button
+                variants={textVariants}
+                whileHover={{ scale: 1.051 }}
+                onClick={() => handleScrollToElement("Contact")}
+              >
+                Contact me
+              </motion.button>
+            </motion.div>
+            <motion.img
+              variants={textVariants}
+              animate="scrollButton"
+              src="/scroll.png"
+              alt=""
+            />
+          </motion.div>
+        
+
+        <div className="imageContainer">
+          <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank">
+            <motion.img
+              src="/linkedin-svg.svg"
+              alt="linkedin"
+              whileHover={{ scale: 1.1 }}
+            />
+          </a>
+          <a href="https://github.com/kartheesan05" target="_blank">
+            <motion.img
+              className="githubhero"
+              src="/gh-svg.svg"
+              alt="github"
+              whileHover={{ scale: 1.1 }}
+            />
+          </a>
+          <a href="https://www.instagram.com/kxrtz_10/" target="_blank">
+            <motion.img
+              src="/instagram-svg.svg"
+              alt="instagram"
+              whileHover={{ scale: 1.1 }}
+            />
+          </a>
+        </div>
       </div>
       <motion.div
         className="slidingTextContainer"
@@ -90,30 +117,6 @@ function Hero() {
       >
         Hello There
       </motion.div>
-      <div className="imageContainer">
-        <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank">
-          <motion.img
-            src="/linkedin-svg.svg"
-            alt="linkedin"
-            whileHover={{ scale: 1.1 }}
-          />
-        </a>
-        <a href="https://github.com/kartheesan05" target="_blank">
-          <motion.img
-            className="githubhero"
-            src="/gh-svg.svg"
-            alt="github"
-            whileHover={{ scale: 1.1 }}
-          />
-        </a>
-        <a href="https://www.instagram.com/kxrtz_10/" target="_blank">
-          <motion.img
-            src="/instagram-svg.svg"
-            alt="instagram"
-            whileHover={{ scale: 1.1 }}
-          />
-        </a>
-      </div>
     </motion.div>
   );
 }
