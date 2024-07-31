@@ -17,6 +17,7 @@
     // padding-top: 140px;
 
     .textContainer {
+      padding-top: 100px;
       height: 100%;
       width: 50%;
       display: flex;
@@ -37,7 +38,6 @@
 
       .buttons {
         z-index: 99;
-        
 
         button {
           padding: 20px;
@@ -54,30 +54,55 @@
       }
 
       //scroll image
-      img { 
+      img {
         width: 50px;
       }
     }
 
     .imageContainer {
-      padding-bottom: 100px;
+      // padding-bottom: 100px;
       display: flex;
       align-items: center;
       z-index: 99;
       gap: 50px;
-      
 
       img {
         height: 150px;
         width: 150px;
       }
+
       .githubhero {
         height: 115px;
         width: 115px;
       }
+
+      @media (max-width: 1024px) {
+        // Styles for tablets (max-width: 1024px)
+        img {
+          height: 100px;
+          width: 100px;
+        }
+
+        .githubhero {
+          height: 75px;
+          width: 75px;
+        }
+      }
+
+      @media (max-width: 450px) {
+        // Styles for mobile (max-width: 768px)
+        img {
+          height: 70px;
+          width: 70px;
+        }
+
+        .githubhero {
+          height: 75px;
+          width: 75px;
+        }
+      }
     }
   }
-
 
   .slidingTextContainer {
     position: absolute;
@@ -88,5 +113,9 @@
     width: 50%;
     padding-bottom: 15px;
     z-index: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
   }
 }
