@@ -12,7 +12,8 @@ html {
 }
 
 body {
-  background-color: #84a98c;
+  // background-color: #84a98c;
+  background-color: #dad7cd;
   color: lightgray;
 }
 
@@ -25,6 +26,7 @@ section {
   height: 100vh;
   width: 100vw;
   scroll-snap-align: center;
+  
 }
 
 .course {
@@ -38,4 +40,8 @@ section {
     height: 200px;
     background-color: white;
   }
+}
+
+#home{
+  background-color: dad7cd;
 }

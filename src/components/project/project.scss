@@ -1,10 +1,19 @@
 @use "@material/button/button";
 @use "@material/theme/theme";
 
-.projecth1{
+.projecth1 {
   text-align: center;
   font-size: 60px;
   padding-top: 60px;
+}
+
+.projectcard{
+  background-color: #84a98c;
+  height: calc(100vh - 20px);
+  width: calc(100vw - 20px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  position: relative;
 }
 
 .carouselcs {
@@ -12,64 +21,30 @@
   align-items: center;
   padding-bottom: 110px;
   height: calc(100vh - 90px);
-  // justify-content: center;
-  //   width: 640px;
   gap: 40px;
 
-  p{
+  p {
     font-size: larger;
     padding-right: 40px;
   }
 
   .buttoncs {
-    // height: 20px;
-    // justify-content: center;
-    display: flex;
-    z-index: 300;
+    padding: 15px 35px;
+    border: #dad7cd;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #dad7cd;
     background-color: #588157;
+    margin-right: 35px;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    cursor: pointer;
   }
 }
 .limitwidth {
   width: 640px;
-  // padding-top: 170px;
   padding-left: 40px;
-  // padding-bottom: 20vh;
   display: flex;
-  //   align-items:x
   justify-content: center;
   gap: 40px;
-}
-
-// Define the primary color
-$primary-color: #588157;
-
-// Import Material components
-
-// Create a theme
-.theme {
-  --md-sys-color-primary: #{$primary-color};
-}
-
-// Apply the theme to the button
-.my-button {
-  @include button.core-styles;
-
-  background-color: var(--md-sys-color-primary);
-  color: #fff; // Set the text color to white for contrast
-  border: none;
-  border-radius: 4px; // Add some border-radius if needed
-  padding: 8px 16px; // Adjust padding as necessary
-  font-size: 14px; // Adjust font size as necessary
-
-  &:hover {
-    background-color: darken($primary-color, 10%);
-  }
-
-  &:active {
-    background-color: darken($primary-color, 15%);
-  }
-
-  &:focus {
-    outline: 2px solid lighten($primary-color, 20%);
-  }
 }

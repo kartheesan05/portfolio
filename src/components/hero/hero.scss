@@ -1,11 +1,11 @@
 .hero {
-  // height: calc(100vh - 100px);
-  height: 100vh;
-  // margin-top: 5vh;
   overflow: hidden;
-  // background: linear-gradient(180deg, #0c0c1d, #111132);
-  background: #84a98c;
-  // position: relative;
+  background-color: #84a98c;
+  height: calc(100vh - 20px);
+  width: calc(100vw - 20px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  position: relative;
 
   .maincontent {
     display: flex;
@@ -19,6 +19,7 @@
     .textContainer {
       padding-top: 100px;
       height: 100%;
+      z-index: 1;
       width: 50%;
       display: flex;
       flex-direction: column;
@@ -111,11 +112,21 @@
     white-space: nowrap;
     color: #ffffff3b;
     width: 50%;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     z-index: 0;
     user-select: none;
     -webkit-user-select: none;
-    -moz-user-select: none; 
+    -moz-user-select: none;
     -ms-user-select: none;
   }
+}
+
+.boxcontainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: #dad7cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // overflow: hidden;
 }

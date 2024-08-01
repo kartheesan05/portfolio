@@ -48,9 +48,9 @@ const sliderVariants = {
 
 function Hero() {
   return (
-    <motion.div className="hero">
-      <div className="maincontent">
-        
+    <>
+      <motion.div className="hero">
+        <div className="maincontent">
           <motion.div
             className="textContainer"
             variants={textVariants}
@@ -82,42 +82,42 @@ function Hero() {
               alt=""
             />
           </motion.div>
-        
 
-        <div className="imageContainer">
-          <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank">
-            <motion.img
-              src="/linkedin-svg.svg"
-              alt="linkedin"
-              whileHover={{ scale: 1.1 }}
-            />
-          </a>
-          <a href="https://github.com/kartheesan05" target="_blank">
-            <motion.img
-              className="githubhero"
-              src="/gh-svg.svg"
-              alt="github"
-              whileHover={{ scale: 1.1 }}
-            />
-          </a>
-          <a href="https://www.instagram.com/kxrtz_10/" target="_blank">
-            <motion.img
-              src="/instagram-svg.svg"
-              alt="instagram"
-              whileHover={{ scale: 1.1 }}
-            />
-          </a>
+          <div className="imageContainer">
+            <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank">
+              <motion.img
+                src="/linkedin-svg.svg"
+                alt="linkedin"
+                whileHover={{ scale: 1.1 }}
+              />
+            </a>
+            <a href="https://github.com/kartheesan05" target="_blank">
+              <motion.img
+                className="githubhero"
+                src="/gh-svg.svg"
+                alt="github"
+                whileHover={{ scale: 1.1 }}
+              />
+            </a>
+            <a href="https://www.instagram.com/kxrtz_10/" target="_blank">
+              <motion.img
+                src="/instagram-svg.svg"
+                alt="instagram"
+                whileHover={{ scale: 1.1 }}
+              />
+            </a>
+          </div>
         </div>
-      </div>
-      <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        Hello There
+        <motion.div
+          className="slidingTextContainer"
+          variants={sliderVariants}
+          initial="initial"
+          animate="animate"
+        >
+          Hello There
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </>
   );
 }
 
