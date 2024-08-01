@@ -11,7 +11,7 @@
   background-color: #84a98c;
   height: calc(100vh - 20px);
   width: calc(100vw - 20px);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   position: relative;
 }
@@ -36,7 +36,7 @@
     color: #dad7cd;
     background-color: #588157;
     margin-right: 35px;
-    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     font-weight: 600;
     cursor: pointer;
   }
