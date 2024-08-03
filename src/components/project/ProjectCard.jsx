@@ -19,10 +19,9 @@ function ProjectCard({ title, detailPage, coverImg, liveDemo, description }) {
       <p>{description}</p>
       <div className="projectcardbutton">
         {detailPage && (
-          <a href={`/${detailPage}`}>
-            {/* <button>Learn More</button> */}
-            Learn More
-          </a>
+          <Link to={`/${detailPage}`}>
+            <button>Learn More</button>
+          </Link>
         )}
         <a href={liveDemo} target="_blank">
           <button>Live Demo</button>
