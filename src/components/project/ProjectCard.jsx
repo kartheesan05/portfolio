@@ -7,9 +7,9 @@ function ProjectCard({ title, detailPage, coverImg, liveDemo, description }) {
     <div className="projectcard">
       <div className="imgwrapper">
         {detailPage ? (
-          <a to={`/${detailPage}`}>
+          <Link to={`/${detailPage}`}>
             <img src={`/${coverImg}`} alt="" />
-          </a>
+          </Link>
         ) : (
           <img src={`/${coverImg}`} alt="" />
         )}
@@ -24,7 +24,8 @@ function ProjectCard({ title, detailPage, coverImg, liveDemo, description }) {
           </a>
         )}
         <a href={liveDemo} target="_blank">
-          <button>Live Demo</button>
+          {/* <button>Live Demo</button> */}
+          Live Demo
         </a>
       </div>
     </div>
