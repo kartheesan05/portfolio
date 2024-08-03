@@ -1,6 +1,8 @@
+@import '../variables.scss';
+
 .hero {
   overflow: hidden;
-  background-color: #63568f;
+  background-color: $primary;
   height: calc(100vh - 20px);
   width: calc(100vw - 20px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
@@ -29,12 +31,12 @@
       h2 {
         font-size: 30px;
         letter-spacing: 10px;
-        color: #dad7cd;
+        color: $primarycont;
       }
 
       h1 {
         font-size: 88px;
-        color: #dad7cd;
+        color: $primarycont;
       }
 
       .buttons {
@@ -42,15 +44,22 @@
 
         button {
           padding: 20px;
-          border: #dad7cd;
+          border: none;
           border-radius: 15px;
           background-color: transparent;
-          color: #588157;
-          background-color: #dad7cd;
+          // color: #50606e;
+          color: $secondarycont;
+          background-color: $secondary;
           margin-right: 35px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           font-weight: 600;
           cursor: pointer;
+        }
+
+        button:hover {
+          color: $secondary;
+          background-color: $secondarycont;
+          transition: 400ms;
         }
       }
 
@@ -124,7 +133,7 @@
 .boxcontainer {
   height: 100vh;
   width: 100vw;
-  background-color: #e8ddff;
+  background-color: $primarycont;
   display: flex;
   align-items: center;
   justify-content: center;

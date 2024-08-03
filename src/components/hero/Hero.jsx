@@ -58,18 +58,18 @@ function Hero() {
             animate="animate"
           >
             <motion.h2 variants={textVariants}>KARTHEESAN</motion.h2>
-            <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
+            <motion.h1 variants={textVariants}>CS Student  Developer</motion.h1>
             <motion.div className="buttons" variants={textVariants}>
               <motion.button
                 variants={textVariants}
-                whileHover={{ scale: 1.051 }}
+                // whileHover={{ scale: 1.051 }}
                 onClick={() => handleScrollToElement("Projects")}
               >
                 See the Latest Works
               </motion.button>
               <motion.button
                 variants={textVariants}
-                whileHover={{ scale: 1.051 }}
+                // whileHover={{ scale: 1.051 }}
                 onClick={() => handleScrollToElement("Contact")}
               >
                 Contact me

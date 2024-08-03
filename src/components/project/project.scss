@@ -1,5 +1,6 @@
 @use "@material/button/button";
 @use "@material/theme/theme";
+@import "../variables.scss";
 
 .projecth1 {
   text-align: center;
@@ -7,11 +8,11 @@
   padding-top: 60px;
 }
 
-.projectcard{
-  background-color: #84a98c;
+.projectcard {
+  background-color: $primary;
   height: calc(100vh - 20px);
   width: calc(100vw - 20px);
-  // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   position: relative;
 }
@@ -20,6 +21,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 110px;
+  overflow: hidden;
   height: calc(100vh - 90px);
   gap: 40px;
 
@@ -33,12 +35,17 @@
     border: #dad7cd;
     border-radius: 15px;
     background-color: transparent;
-    color: #dad7cd;
-    background-color: #588157;
+    color: $onsecondarycont;
+    background-color: $secondarycont;
     margin-right: 35px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     font-weight: 600;
     cursor: pointer;
+  }
+  .buttoncs:hover {
+    color: $secondarycont;
+    background-color: $onsecondarycont;
+    transition: 400ms;
   }
 }
 .limitwidth {

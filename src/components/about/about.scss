@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .aboutWrapper {
   display: flex;
   flex-direction: column; /* Stack items vertically */
@@ -7,21 +9,23 @@
   text-align: center; /* Center text within the container */
   padding: 15vh;
   overflow: hidden;
-  background-color: #84a98c;
+  background-color: $primary;
   height: calc(100vh - 20px);
   width: calc(100vw - 20px);
-  // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   position: relative;
 
   h1 {
     font-size: 125px;
     text-align: center;
+    color: $primarycont;
   }
 
   #para {
     padding: 10vh;
     font-size: 25px;
-    text-align: center;
+    text-align: left;
+    color: $primarycont;
   }
 }

@@ -1,9 +1,11 @@
+@import '../variables.scss';
+
 .contactclass{
     // overflow: hidden;
-  background-color: #84a98c;
+  background-color: $primary;
   height: calc(100vh - 20px);
   width: calc(100vw - 20px);
-//   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   position: relative;
   text-align: center;
