@@ -1,32 +1,14 @@
-import "./app.scss";
-import Hero from "./components/hero/Hero";
-import Sidebar from "./components/sidebar/Sidebar";
-import About from "./components/about/About";
-import Project from "./components/project/Project";
-import Contact from "./components/Contact/Contact";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Home from "./Home";
+import ProjectDetail from "./components/project/ProjectDetail";
+
+const router = createBrowserRouter([{ path: "/", element: <Home /> }, {
+path: '/yelpcamp', element: <ProjectDetail/>
+}]);
 
 function App() {
-  return (
-    <div>
-      <section id="Home" className="boxcontainer">
-        
-        <Sidebar />
-        <Hero />
-      </section>
-      
-      <section id="About" className="boxcontainer">
-        <About />
-      </section>
-      
-      <section id="Projects" className="boxcontainer">
-        <Project />
-      </section>
-      
-      <section id="Contact" className="boxcontainer">
-        <Contact/>
-      </section>
-    </div>
-  );
+  return <RouterProvider router={router}/>
 }
 
 export default App;

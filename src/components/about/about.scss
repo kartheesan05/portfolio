@@ -1,31 +1,36 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .aboutWrapper {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Vertical alignment */
-  align-items: center; /* Horizontal alignment */
-  /* Full viewport height */
-  text-align: center; /* Center text within the container */
-  padding: 15vh;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10vh;
+  // padding-top: 10px;
   overflow: hidden;
   background-color: $primary;
   height: calc(100vh - 20px);
   width: calc(100vw - 20px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  position: relative;
+  // position: relative;
 
   h1 {
-    font-size: 125px;
+    font-size: 100px;
     text-align: center;
     color: $primarycont;
   }
 
   #para {
     padding: 10vh;
-    font-size: 25px;
-    text-align: left;
+    font-size: 33px;
+    text-align: justify;
     color: $primarycont;
+
+    a{
+      color: red;
+      text-decoration: underline;
+    }
   }
 }

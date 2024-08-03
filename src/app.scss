@@ -50,3 +50,12 @@ section {
 // #home{
 //   background-color: #dad7cd;
 // }
+
+.basiccontainer {
+  overflow: hidden;
+  background-color: $primary;
+  height: calc(100vh - 20px);
+  width: calc(100vw - 20px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}

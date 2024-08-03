@@ -58,7 +58,7 @@ function Hero() {
             animate="animate"
           >
             <motion.h2 variants={textVariants}>KARTHEESAN</motion.h2>
-            <motion.h1 variants={textVariants}>CS Student  Developer</motion.h1>
+            <motion.h1 variants={textVariants}>CS Student   //Developer</motion.h1>
             <motion.div className="buttons" variants={textVariants}>
               <motion.button
                 variants={textVariants}

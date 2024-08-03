@@ -2,19 +2,55 @@
 @use "@material/theme/theme";
 @import "../variables.scss";
 
-.projecth1 {
+.projectcontainer {
+  display: flex;
   text-align: center;
-  font-size: 60px;
-  padding-top: 60px;
-}
-
-.projectcard {
+  flex-direction: column;
   background-color: $primary;
   height: calc(100vh - 20px);
   width: calc(100vw - 20px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  position: relative;
+
+  h1 {
+    text-align: center;
+    font-size: 60px;
+    padding-top: 60px;
+    color: $primarycont;
+  }
+
+  .projectcardcontainer{
+    padding: 75px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+
+  }
+}
+
+.projectcard{
+  height: 350px;
+  width: 300px;
+  background-color: $primarycont;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .imgwrapper{
+    padding: 10px;
+  }
+
+  img{
+    // padding-top: 10px;
+    
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    // object-fit: cover;
+    // width: 100%;
+    // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px;
+  }
 }
 
 .carouselcs {
