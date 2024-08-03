@@ -2,6 +2,15 @@
 @use "@material/theme/theme";
 @import "../variables.scss";
 
+.projectdetail{
+  height: 100vh;
+  width: 100vw;
+  background: $primarycont;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .projectcontainer {
   display: flex;
   text-align: center;
@@ -19,38 +28,63 @@
     color: $primarycont;
   }
 
-  .projectcardcontainer{
+  .projectcardcontainer {
     padding: 75px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 50px;
-
   }
 }
 
-.projectcard{
+.projectcard {
   height: 350px;
   width: 300px;
   background-color: $primarycont;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-  .imgwrapper{
+  .imgwrapper {
     padding: 10px;
   }
 
-  img{
-    // padding-top: 10px;
-    
+  img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    // object-fit: cover;
-    // width: 100%;
-    // border-top-left-radius: 10px;
-    // border-top-right-radius: 10px;
   }
+
+  p {
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .projectcardbutton {
+    display: flex; /* Enable Flexbox layout */
+    justify-content: center;
+    // flex-direction: column; /* Arrange buttons vertically or use row for horizontal */
+    gap: 20px; /* Set the desired gap between buttons */
+    padding-top: 15px;
+
+    button {
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      // margin: 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      color: $secondarycont;
+      background: $tertiarycont;
+    }
+  }
+}
+
+.projectcard:hover {
+  background-color: $onsecondarycont;
+  transition: 400ms;
 }
 
 .carouselcs {

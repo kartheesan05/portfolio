@@ -1,14 +1,26 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./project.scss";
 
-function ProjectCard({title ,link , coverImg}) {
+function ProjectCard({ title, detailPage, coverImg, liveDemo, description }) {
   return (
     <div className="projectcard">
       <div className="imgwrapper">
-        <img src={`/${coverImg}`} alt="" />
+        <Link to={`/${detailPage}`}>
+          <img src={`/${coverImg}`} alt="" />
+        </Link>
       </div>
-      <Link to={`/${link}`}>{title}</Link>
+      <h4>{title}</h4>
+      {/* <div className="description"></div> */}
+      <p>{description}</p>
+      <div className="projectcardbutton">
+        {detailPage && <Link to={`/${detailPage}`}>
+          <button>Learn More</button>
+        </Link>}
+        <a href={liveDemo} target="_blank">
+          <button>Live Demo</button>
+        </a>
+      </div>
     </div>
   );
 }

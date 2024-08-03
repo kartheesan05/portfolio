@@ -6,9 +6,29 @@ function Project() {
     <div className="projectcontainer">
       <h1>Projects</h1>
       <div className="projectcardcontainer">
-        <ProjectCard title={'YelpCamp'} coverImg={'yc1.png'} link={'yelpcamp'} />
-        <ProjectCard title={''} coverImg={''} link={''}/>
-        <ProjectCard title={''} coverImg={''} link={''}/>
+        <ProjectCard
+          title={"YelpCamp"}
+          coverImg={"yc1.png"}
+          detailPage={"yelpcamp"}
+          liveDemo={"https://yc.kartheesa.online"}
+          description={
+            "A full stack web app with CRUD funtionality and RESTful API"
+          }
+        />
+        <ProjectCard
+          title={"Timer Game"}
+          coverImg={"timer.png"}
+          liveDemo={"https://timergame.kartheesan.online"}
+          description={
+            "A game where you try guess and stop the timer with as least time left"
+          }
+        />
+        <ProjectCard
+          title={"Tic Tac Toe"}
+          coverImg={"ttt.png"}
+          liveDemo={"https://ttt.kartheesan.online"}
+          description={"A two player Tic Tac Toe game built using React Js"}
+        />
       </div>
     </div>
   );

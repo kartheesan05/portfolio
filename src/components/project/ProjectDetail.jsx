@@ -8,7 +8,7 @@ function handleClick() {
 
 function ProjectDetail() {
   return (
-    // <div className="boxcontainer">
+    <div className="projectdetail">
       <div className="projectcontainer">
         <h1 className="projecth1">Yelp Camp</h1>
         <div className="carouselcs">
@@ -22,7 +22,7 @@ function ProjectDetail() {
           </p>
         </div>
       </div>
-    // </div>
+     </div>
   );
 }
 

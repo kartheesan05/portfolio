@@ -17,17 +17,17 @@ function Home() {
       <section id="About" className="boxcontainer">
         <About />
       </section>
-      <section id="Skills">
+      {/* <section id="Skills">
         <Skills />
-      </section>
+      </section> */}
 
       <section id="Projects" className="boxcontainer">
         <Project />
       </section>
 
-      <section id="Contact" className="boxcontainer">
+      {/* <section id="Contact" className="boxcontainer">
         <Contact />
-      </section>
+      </section> */}
     </div>
   );
 }

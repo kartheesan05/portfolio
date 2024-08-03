@@ -32,11 +32,13 @@
         font-size: 30px;
         letter-spacing: 10px;
         color: $primarycont;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
       h1 {
         font-size: 88px;
         color: $primarycont;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
       .buttons {
@@ -79,6 +81,7 @@
       img {
         height: 150px;
         width: 150px;
+        
       }
 
       .githubhero {
