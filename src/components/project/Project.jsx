@@ -10,7 +10,7 @@ function Project() {
           title={"YelpCamp"}
           coverImg={"yc1.png"}
           detailPage={"yelpcamp"}
-          liveDemo={"https://yc.kartheesa.online"}
+          liveDemo={"https://yc.kartheesan.online"}
           description={
             "A full stack web app with CRUD funtionality and RESTful API"
           }
