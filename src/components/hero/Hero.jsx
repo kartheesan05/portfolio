@@ -78,7 +78,7 @@ function Hero() {
             <motion.img
               variants={textVariants}
               animate="scrollButton"
-              src="/scroll.png"
+              src="/scroll.svg"
               alt=""
             />
           </motion.div>
