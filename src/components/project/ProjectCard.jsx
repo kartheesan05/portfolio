@@ -8,10 +8,10 @@ function ProjectCard({ title, detailPage, coverImg, liveDemo, description }) {
       <div className="imgwrapper">
         {detailPage ? (
           <Link to={`/${detailPage}`}>
-            <img src={`/${coverImg}`} alt="" />
+            <img src={coverImg} alt="" />
           </Link>
         ) : (
-          <img src={`/${coverImg}`} alt="" />
+          <img src={coverImg} alt="" />
         )}
       </div>
       <h4>{title}</h4>
