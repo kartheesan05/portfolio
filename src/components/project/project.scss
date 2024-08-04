@@ -20,6 +20,15 @@
   width: calc(100vw - 20px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  // margin-bottom: 10px;
+
+  @media (max-width: 1059px) {
+    height: 1040px;
+  }
+
+  @media(max-width: 709px) {
+    height: 1440px;
+  }
 
   h1 {
     text-align: center;
@@ -29,6 +38,8 @@
   }
 
   .projectcardcontainer {
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 75px 0px;
     display: flex;
     flex-wrap: wrap;

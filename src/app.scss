@@ -28,9 +28,9 @@ a {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  scroll-snap-align: center;
+  // scroll-snap-align: center;
   
 }
 
@@ -54,8 +54,18 @@ section {
 .basiccontainer {
   overflow: hidden;
   background-color: $primary;
-  height: calc(100vh - 20px);
+  min-height: calc(100vh - 20px);
   width: calc(100vw - 20px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+}
+
+.boxcontainer {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $primarycont;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // overflow: hidden;
 }

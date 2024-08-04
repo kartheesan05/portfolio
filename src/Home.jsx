@@ -20,11 +20,9 @@ function Home() {
       {/* <section id="Skills">
         <Skills />
       </section> */}
-
       <section id="Projects" className="boxcontainer">
         <Project />
       </section>
-
       {/* <section id="Contact" className="boxcontainer">
         <Contact />
       </section> */}

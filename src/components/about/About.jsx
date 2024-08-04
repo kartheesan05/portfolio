@@ -5,7 +5,7 @@ function About() {
     <div className="boxcontainer">
       <div className="aboutWrapper">
         <h1>About Me</h1>
-        <p id="para">
+        <p>
           CS Undergrad student at Sri Venkateswara College of engineering.
           Enthusiastic about technology and learning how things work. I like to
           participate in hackathons and build cool stuff. Checkout my github or
