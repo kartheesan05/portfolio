@@ -10,7 +10,7 @@ function Home() {
   return (
     <div>
       <section id="Home" className="boxcontainer">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <Hero />
       </section>
 
