@@ -1,12 +1,14 @@
-@import '/src/components/variables.scss';
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,1000&display=swap");
 
-
-
+/* Custom styles */
+body {
+  font-family: "DM Sans", sans-serif;
+}
+@import "/src/components/variables.scss";
 
 html {
   scroll-behavior: smooth;
-    // scroll-snap-type: y mandatory;
-
+  // scroll-snap-type: y mandatory;
 }
 
 * {
@@ -18,7 +20,7 @@ html {
 
 body {
   // background-color: #84a98c;
-   background-color: $primarycont;
+  background-color: $primarycont;
   //  color: lightgray;
 }
 
@@ -27,12 +29,11 @@ a {
   color: inherit;
 }
 
-section {
-  min-height: 100vh;
-  width: 100vw;
+// section {
+  // min-height: 100vh;
+  // width: 100vw;
   // scroll-snap-align: center;
-  
-}
+// }
 
 // .course {
 //   height: 100vh;
@@ -54,15 +55,15 @@ section {
 .basiccontainer {
   overflow: hidden;
   background-color: $primary;
-  min-height: calc(100vh - 20px);
+  // min-height: calc(100vh - 20px);
   width: calc(100vw - 20px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
 
 .boxcontainer {
-  min-height: 100vh;
-  width: 100vw;
+  // min-height: 100vh;
+  // width: 100vw;
   background-color: $primarycont;
   display: flex;
   align-items: center;

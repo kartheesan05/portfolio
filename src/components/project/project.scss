@@ -1,5 +1,4 @@
-@use "@material/button/button";
-@use "@material/theme/theme";
+
 @import "../variables.scss";
 
 .projectdetail {
@@ -11,9 +10,12 @@
   justify-content: center;
 }
 
+
+
 .projectcontainer {
   display: flex;
   text-align: center;
+  margin: 10px;
   flex-direction: column;
   background-color: $primary;
   height: calc(100vh - 20px);
@@ -74,49 +76,23 @@
   }
 
   .projectcardbutton {
-    display: flex; /* Enable Flexbox layout */
+    display: flex;
     justify-content: center;
-    // flex-direction: column; /* Arrange buttons vertically or use row for horizontal */
-    gap: 20px; /* Set the desired gap between buttons */
+    gap: 20px; 
     padding-top: 15px;
 
-    // button {
-    //   padding: 10px;
-    //   border: none;
-    //   cursor: pointer;
-    //   // margin: 20px;
-    //   border-radius: 30px;
-    //   font-weight: bold;
-    //   color: $secondarycont;
-    //   background: $tertiarycont;
-    // }
 
     button {
-      background-color: #aac7ff; /* Primary color */
-      color: $secondarycont; /* Text color */
+      background-color: #aac7ff; 
+      color: $secondarycont; 
       padding: 10px 25px;
       cursor: pointer;
       border-radius: 30px;
       font-size: 14px;
-      // font-weight: bold;
       border: none;
       cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Elevation shadow */
-      transition: box-shadow 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
-
-    // button:hover {
-    //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow on hover */
-    // }
-
-    // button:active {
-    //   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Shadow on click */
-    // }
-
-    // button:focus {
-    //   outline: none;
-    //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(98, 0, 234, 0.5); /* Shadow on focus */
-    // }
   }
 }
 
