@@ -1,4 +1,3 @@
-
 @import "../variables.scss";
 
 .projectdetail {
@@ -10,27 +9,25 @@
   justify-content: center;
 }
 
-
-
 .projectcontainer {
   display: flex;
   text-align: center;
   margin: 10px;
   flex-direction: column;
   background-color: $primary;
-  height: calc(100vh - 20px);
+  min-height: calc(100vh - 20px);
   width: calc(100vw - 20px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   // margin-bottom: 10px;
 
-  @media (max-width: 1059px) {
-    height: 1040px;
-  }
+  // @media (max-width: 1059px) {
+  //   height: 1115px;
+  // }
 
-  @media (max-width: 709px) {
-    height: 1440px;
-  }
+  // @media (max-width: 709px) {
+  //   height: 1588px;
+  // }
 
   h1 {
     text-align: center;
@@ -42,56 +39,61 @@
   .projectcardcontainer {
     margin-left: 20px;
     margin-right: 20px;
-    padding: 75px 0px;
+    margin: 75px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 50px;
-  }
-}
 
-.projectcard {
-  height: 350px;
-  width: 300px;
-  background-color: $primarycont;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    .projectcard {
+      height: 400px;
+      width: 300px;
+      background-color: $primarycont;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-  .imgwrapper {
-    padding: 10px;
-  }
+      h4 {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 550;
+      }
 
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+      .imgwrapper {
+        padding: 10px;
+      }
 
-  p {
-    text-align: center;
-    padding-top: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
 
-  .projectcardbutton {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
-    padding-top: 15px;
+      p {
+        text-align: center;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
 
+      .projectcardbutton {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
 
-    button {
-      background-color: #aac7ff; 
-      color: $secondarycont; 
-      padding: 10px 25px;
-      cursor: pointer;
-      border-radius: 30px;
-      font-size: 14px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        button {
+          background-color: #aac7ff;
+          color: $secondarycont;
+          padding: 10px 25px;
+          cursor: pointer;
+          border-radius: 30px;
+          font-size: 14px;
+          border: none;
+          cursor: pointer;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+      }
     }
   }
 }
@@ -135,7 +137,6 @@
     color: $secondarycont;
     background-color: $onsecondarycont;
     transition: 400ms;
-
   }
 }
 .limitwidth {
