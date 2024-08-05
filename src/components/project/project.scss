@@ -1,7 +1,5 @@
 @import "../variables.scss";
 
-
-
 .projectcontainer {
   display: flex;
   text-align: center;
@@ -88,17 +86,11 @@
         }
       }
     }
+    .projectcard:hover {
+      background-color: #ffb4ab;
+      transition: 400ms;
+    }
   }
-}
-
-.projectcard:hover {
-  background-color: #ffb4ab;
-  transition: 400ms;
-
-  // button{
-  //   background-color: #3f2844;
-  //   color: $primarycont;
-  // }
 }
 
 .carouselcs {
