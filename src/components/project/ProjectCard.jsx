@@ -9,6 +9,10 @@ function ProjectCard({ title, detailPage, coverImg, liveDemo, description }) {
     navigate(`/${detailPage}`);
   }
 
+  function handleDemoClick() {
+    window.open(liveDemo);
+  }
+
   return (
     <div className="projectcard">
       <div className="imgwrapper">
@@ -18,9 +22,7 @@ function ProjectCard({ title, detailPage, coverImg, liveDemo, description }) {
       <p>{description}</p>
       <div className="projectcardbutton">
         <button onClick={handleClick}>Learn More</button>
-        <a href={liveDemo} target="_blank">
-          <button>Live Demo</button>
-        </a>
+        <button onClick={handleDemoClick}>Live Demo</button>
       </div>
     </div>
   );
