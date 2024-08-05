@@ -1,22 +1,52 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .floating-circle {
   position: fixed; /* Fixes the div relative to the viewport */
-  top: 29px;       /* Adjust the top position */
-  left: 25px;      /* Adjust the left position */
-  width: 50px;     /* Adjust the width */
-  height: 50px;    /* Adjust the height */
+  top: 29px; /* Adjust the top position */
+  left: 25px; /* Adjust the left position */
+  width: 50px; /* Adjust the width */
+  height: 50px; /* Adjust the height */
   background-color: $onsecondarycont; /* Background color */
   border-radius: 50%; /* Makes the div circular */
-  display: flex;   /* Flexbox to center the SVG */
+  display: flex; /* Flexbox to center the SVG */
   cursor: pointer;
   align-items: center; /* Vertically centers the SVG */
   justify-content: center; /* Horizontally centers the SVG */
-  z-index: 1000;   /* Ensures the div is above other elements */
+  z-index: 1000; /* Ensures the div is above other elements */
 }
 
 .icon {
   width: 24px; /* Adjust the width of the SVG */
   height: 24px; /* Adjust the height of the SVG */
   fill: #fff; /* SVG fill color */
+}
+
+.projectdetailcontainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .projectdetail {
+    height: calc(100vh - 20px);
+    width: calc(100vw - 20px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+      margin-top: 40px;
+      font-size: 50px;
+      color: $primarycont;
+    }
+
+    p{
+      color: $primarycont;
+    }
+  }
 }

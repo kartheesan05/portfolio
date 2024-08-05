@@ -17,11 +17,11 @@ function ProjectDetail() {
 
   return (
     <>
-      <div onClick={goHome} className="floating-circle">
-        <img src="/leftarrow.svg" alt="" className="icon" />
-      </div>
-      <div className="projectdetail">
-        <div className="projectcontainer">
+      <div className="projectdetailcontainer">
+        <div onClick={goHome} className="floating-circle">
+          <img src="/leftarrow.svg" alt="" className="icon" />
+        </div>
+        <div className="projectdetail">
           <h1 className="projecth1">Yelp Camp</h1>
           <div className="carouselcs">
             <Image />
