@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .hero {
   overflow: hidden;
@@ -10,40 +10,102 @@
   margin: 10px;
   position: relative;
 
+  @media (max-aspect-ratio: 1/1) {
+    height: 80vh;
+  }
+
   .maincontent {
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 30px;
     height: inherit;
     padding: 100px;
-    // padding-top: 140px;
+
+    // @media (max-aspect-ratio: 1/1) {
+    //   padding-top: ;
+    // }
+
+    @media (max-width: 1100px) {
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      padding: 50px 50px;
+    }
 
     .textContainer {
       padding-top: 100px;
-      height: 100%;
+      // height: 100%;
       z-index: 1;
+      text-align: center;
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 40px;
+      align-items: center;
+
+      @media (max-width: 950px) {
+        width: 80%;
+        text-align: center;
+        padding-top: 50px;
+      }
 
       h2 {
         font-size: 30px;
+        text-align: center;
+        width: fit-content;
         letter-spacing: 10px;
         color: $primarycont;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
+      .herotext {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
 
-      h1 {
-        font-size: 88px;
-        color: $primarycont;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        h1 {
+          text-wrap: nowrap;
+          font-size: 88px;
+          text-align: center;
+          color: $primarycont;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+          @media (max-width: 530px) {
+            font-size: 80px;
+          }
+
+          @media (max-width: 470px) {
+            font-size: 75px;
+          }
+
+          @media (max-width: 430px) {
+            font-size: 70px;
+          }
+
+          @media (max-width: 400px) {
+            font-size: 60px;
+          }
+        }
       }
 
       .buttons {
         z-index: 99;
+        display: flex;
+        gap: 35px;
+        justify-content: center;
+
+        @media (max-width: 520px) {
+          width: 70vw;
+        }
 
         button {
           padding: 20px;
@@ -53,7 +115,7 @@
           // color: #50606e;
           color: $secondarycont;
           background-color: $secondary;
-          margin-right: 35px;
+          // margin-right: 35px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           font-weight: 600;
           cursor: pointer;
@@ -73,16 +135,18 @@
     }
 
     .imageContainer {
-      // padding-bottom: 100px;
       display: flex;
       align-items: center;
       z-index: 99;
       gap: 50px;
 
+      @media (max-width: 950px) {
+        padding-bottom: 100px;
+      }
+
       img {
         height: 150px;
         width: 150px;
-        
       }
 
       .githubhero {
@@ -90,7 +154,7 @@
         width: 115px;
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: 1100px) {
         // Styles for tablets (max-width: 1024px)
         img {
           height: 100px;
@@ -133,5 +197,3 @@
     -ms-user-select: none;
   }
 }
-
-
