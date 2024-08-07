@@ -131,6 +131,7 @@
       //scroll image
       img {
         width: 50px;
+        // padding-top: 25px;
       }
     }
 
@@ -149,10 +150,10 @@
         width: 150px;
       }
 
-      .githubhero {
-        height: 115px;
-        width: 115px;
-      }
+      // .githubhero {
+      //   height: 115px;
+      //   width: 115px;
+      // }
 
       @media (max-width: 1100px) {
         // Styles for tablets (max-width: 1024px)

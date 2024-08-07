@@ -96,7 +96,7 @@ function Hero() {
             </a>
             <a href="https://github.com/kartheesan05" target="_blank">
               <motion.img
-                className="githubhero"
+                // className="githubhero"
                 src="/gh-svg.svg"
                 alt="github"
                 whileHover={{ scale: 1.1 }}
