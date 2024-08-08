@@ -1,9 +1,9 @@
 import "./app.scss";
 import Hero from "./components/hero/Hero";
-import Sidebar from "./components/sidebar/Sidebar";
+// import Sidebar from "./components/sidebar/Sidebar";
 import About from "./components/about/About";
 import Project from "./components/project/Project";
-import Contact from "./components/Contact/Contact";
+// import Contact from "./components/Contact/Contact";
 // import Skills from "./components/skills/Skills";
 
 function Home() {
