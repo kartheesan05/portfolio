@@ -6,12 +6,11 @@ import {
 
 import Home from "./Home";
 import ProjectDetail from "./components/project/projectdetail/ProjectDetail";
-import NotFound from './components/notfound/NotFound';
+// import NotFound from './components/notfound/NotFound';
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path: "/yelpcamp", element: <ProjectDetail /> },
-  { path: "/*", element: <NotFound/> },
+  { path: "/yelpcamp", element: <ProjectDetail /> }
 ]);
 
 function App() {
