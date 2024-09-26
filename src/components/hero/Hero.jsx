@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import "./hero.scss";
 
@@ -87,14 +86,14 @@ function Hero() {
           </motion.div>
 
           <div className="imageContainer">
-            <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank">
+            <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank" rel="noreferrer">
               <motion.img
                 src="/linkedin-svg.svg"
                 alt="linkedin"
                 whileHover={{ scale: 1.1 }}
               />
             </a>
-            <a href="https://github.com/kartheesan05" target="_blank">
+            <a href="https://github.com/kartheesan05" target="_blank" rel="noreferrer">
               <motion.img
                 // className="githubhero"
                 src="/gh-svg.svg"
@@ -102,7 +101,7 @@ function Hero() {
                 whileHover={{ scale: 1.1 }}
               />
             </a>
-            <a href="https://www.instagram.com/kxrtz_10/" target="_blank">
+            <a href="https://www.instagram.com/kxrtz_10/" target="_blank" rel="noreferrer">
               <motion.img
                 src="/instagram-svg.svg"
                 alt="instagram"
