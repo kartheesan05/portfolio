@@ -31,7 +31,7 @@ export default function ProjectCard({
         className={`h-48 border-b-4 border-border flex items-center justify-center`}
         style={{ backgroundColor: bgColor }}
       >
-        <p>Project Image</p>
+        {/* <p>Project Image</p> */}
       </div>
       <div className="p-6">
         <h3 className="text-2xl font-heading mb-2">{title}</h3>

@@ -88,20 +88,20 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard 
-            title="Project One" 
-            description="A description of your first amazing project goes here." 
+            title="Coming Soon" 
+            description="Will be updated soon, check back later!" 
             bgColor="#FFC0CB" 
           />
           
           <ProjectCard 
-            title="Project Two" 
-            description="A description of your second awesome project goes here." 
+            title="Coming Soon" 
+            description="Will be updated soon, check back later!" 
             bgColor="#98FB98" 
           />
           
           <ProjectCard 
-            title="Project Three" 
-            description="A description of your third fantastic project goes here." 
+            title="Coming Soon" 
+            description="Will be updated soon, check back later!" 
             bgColor="#ADD8E6" 
           />
         </div>
