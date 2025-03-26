@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
@@ -5,17 +7,25 @@ import SkillBadge from "@/components/SkillBadge";
 import ContactForm from "@/components/ContactForm";
 import { getTitleBoxClasses, getContentBoxClasses } from "@/lib/neobrutalism";
 import Link from "next/link";
+import { useToast } from '@/hooks/use-toast'
+
 
 export default function Home() {
+
+  const { toast } = useToast();
   const skills = [
-    "React", 
-    "Next.js", 
-    "TypeScript", 
-    "TailwindCSS", 
-    "JavaScript", 
-    "Node.js", 
-    "UI/UX Design", 
-    "Responsive Design"
+    "Full-stack Development",
+    "React",
+    "Node.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Python",
+    "TensorFlow",
+    "Cloud Computing",
+    "CI/CD",
+    "Flutter",
+    "Machine Learning",
+    "TypeScript"
   ];
 
   return (
@@ -27,18 +37,18 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col gap-6 justify-center">
             <h2 className="text-6xl font-heading">
-              Creative <span className="bg-main px-2">Developer</span>
+            CS Student and <span className="bg-main px-2">Developer</span>
             </h2>
             <p className="text-xl">
               I build beautiful, interactive, and performant web applications 
-              with a focus on user experience and modern design.
+              with a focus on user experience and modern design. I also have interests in machine learning.
             </p>
             <div className="flex gap-4 mt-4">
               <Link href="#projects">
                 <Button>View Projects</Button>
               </Link>
-              <Link href="#contact">
-                <Button variant="neutral">Contact Me</Button>
+              <Link href="/resume.pdf" target="_blank">
+                <Button variant="neutral">Get Resume</Button>
               </Link>
             </div>
           </div>
@@ -46,39 +56,6 @@ export default function Home() {
             <div className="text-center">
               <p className="text-lg mb-2">Profile Image</p>
               <p className="text-sm">(Placeholder for your photo)</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Theme Showcase Section */}
-      <section className="mb-24">
-        <div className={getTitleBoxClasses() + " mb-8"}>
-          <h2 className="text-4xl font-heading">Try Dark Mode!</h2>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className={getContentBoxClasses()}>
-            <h3 className="text-2xl font-heading mb-4">Light & Dark Themes</h3>
-            <p className="mb-4">
-              This portfolio features a beautiful Neobrutalism design with both light and dark themes. Try toggling the theme using the button in the top-right corner!
-            </p>
-            <p>
-              The theme automatically adapts to your system preference but can be manually changed at any time. Your preference will be saved for your next visit.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-[#272933] border-4 border-border shadow-shadow p-6 flex items-center justify-center">
-              <span className="text-lg font-medium">Light Mode</span>
-            </div>
-            <div className="bg-[#272933] dark:bg-white text-white dark:text-black border-4 border-border shadow-shadow p-6 flex items-center justify-center">
-              <span className="text-lg font-medium">Dark Mode</span>
-            </div>
-            <div className="bg-main border-4 border-border shadow-shadow p-6 flex items-center justify-center">
-              <span className="text-lg font-medium text-mtext">Primary Color</span>
-            </div>
-            <div className="bg-bw border-4 border-border shadow-shadow p-6 flex items-center justify-center">
-              <span className="text-lg font-medium">Content Box</span>
             </div>
           </div>
         </div>
@@ -117,13 +94,13 @@ export default function Home() {
           <div className={getContentBoxClasses()}>
             <h2 className="text-4xl font-heading mb-6">About Me</h2>
             <p className="mb-4">
-              Hi there! I'm a passionate web developer with expertise in React, Next.js, and modern front-end technologies.
+              Hi there! I'm a pragmatic and technically oriented full-stack developer with a keen interest in cloud computing and web development. Currently pursuing B.E in Computer Science and Engineering at Sri Venkateswara College of Engineering.
             </p>
             <p className="mb-4">
-              I love creating unique digital experiences with clean code and innovative design solutions.
+              As Tech Head at FORESE and Senior Web Developer at Know-I, I've developed and maintained various web applications using React, Node.js, and MongoDB. I have experience in implementing CI/CD pipelines and deploying applications to cloud platforms.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities.
+              I'm passionate about building innovative solutions, from web applications to machine learning projects. When I'm not coding, you can find me participating in hackathons, leading technical teams, and exploring new technologies in full-stack development.
             </p>
           </div>
           <div id="skills" className={getTitleBoxClasses() + " scroll-mt-16"}>
@@ -150,20 +127,79 @@ export default function Home() {
             </p>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">📧</div>
-                <span>email@example.com</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                  </div>
+                  <span>kartheesan2005@gmail.com</span>
+                </div>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText('kartheesan2005@gmail.com');
+                    toast({
+                      title: "Email copied to clipboard",
+                      // description: "You can now paste it into your email client"
+                    });
+                  }}
+                  className="p-2 hover:bg-main rounded-base transition-colors"
+                  title="Copy email"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                </button>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">📱</div>
-                <span>+1 (123) 456-7890</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                  </div>
+                  <span>+91 6382058580</span>
+                </div>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText('+916382058580');
+                    toast({
+                      title: "Phone number copied to clipboard",
+                      // description: "You can now paste it into your phone client"
+                    });
+                  }}
+                  className="p-2 hover:bg-main rounded-base transition-colors"
+                  title="Copy phone"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                </button>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">🔗</div>
-                <span>linkedin.com/in/yourprofile</span>
+                <a href="https://linkedin.com/in/kartheesan05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                      <rect x="2" y="9" width="4" height="12"/>
+                      <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                  </div>
+                  <span>linkedin.com/in/kartheesan05</span>
+                </a>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">🐙</div>
-                <span>github.com/yourusername</span>
+                <a href="https://github.com/kartheesan05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </div>
+                  <span>github.com/kartheesan05</span>
+                </a>
               </div>
             </div>
           </div>
@@ -177,11 +213,18 @@ export default function Home() {
       {/* Footer */}
       <footer className={getTitleBoxClasses()}>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-lg font-heading">© 2025 Jerry's Portfolio</p>
+          <p className="text-lg font-heading">© {new Date().getFullYear()} Kartheesan's Portfolio</p>
           <div className="flex gap-4">
-            <Button variant="noShadow" size="sm">GitHub</Button>
-            <Button variant="noShadow" size="sm">LinkedIn</Button>
-            <Button variant="noShadow" size="sm">Twitter</Button>
+            <Button variant="reverse" size="sm">
+              <a href="https://github.com/kartheesan05" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </Button>
+            <Button variant="reverse" size="sm">
+              <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </Button>
+            <Button variant="reverse" size="sm">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </Button>
+            {/* <Button variant="reverse" size="sm">Twitter</Button> */}
           </div>
         </div>
       </footer>

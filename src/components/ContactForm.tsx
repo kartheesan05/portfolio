@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { getInputClasses } from "@/lib/neobrutalism";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -17,8 +18,8 @@ export default function ContactForm() {
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  // Replace YOUR_FORM_ID with the actual form ID from Formspree
+  const [formState, handleFormspreeSubmit] = useForm("mdkedvpo");
 
   const validateForm = () => {
     let valid = true;
@@ -58,23 +59,14 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (validateForm()) {
-      setIsSubmitting(true);
-      
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitted(true);
+      await handleFormspreeSubmit(e);
+      if (formState.succeeded) {
         setFormData({ name: "", email: "", message: "" });
-        
-        // Reset submitted status after 3 seconds
-        setTimeout(() => {
-          setSubmitted(false);
-        }, 3000);
-      }, 1000);
+      }
     }
   };
 
@@ -91,10 +83,11 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className="w-full bg-transparent outline-none"
-            disabled={isSubmitting}
+            disabled={formState.submitting}
           />
         </div>
         {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+        <ValidationError prefix="Name" field="name" errors={formState.errors} />
       </div>
       
       <div className="space-y-1">
@@ -106,10 +99,11 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             className="w-full bg-transparent outline-none"
-            disabled={isSubmitting}
+            disabled={formState.submitting}
           />
         </div>
         {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+        <ValidationError prefix="Email" field="email" errors={formState.errors} />
       </div>
       
       <div className="space-y-1">
@@ -120,20 +114,21 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             className="w-full h-full bg-transparent outline-none resize-none"
-            disabled={isSubmitting}
+            disabled={formState.submitting}
           />
         </div>
         {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+        <ValidationError prefix="Message" field="message" errors={formState.errors} />
       </div>
       
       <div className="self-start">
-        {submitted ? (
+        {formState.succeeded ? (
           <div className="bg-green-500 text-white border-2 border-border p-2 rounded-base">
             Message sent successfully!
           </div>
         ) : (
-          <Button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send Message"}
+          <Button type="submit" disabled={formState.submitting}>
+            {formState.submitting ? "Sending..." : "Send Message"}
           </Button>
         )}
       </div>

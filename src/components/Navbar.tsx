@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "@/components/ThemeToggle";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -13,24 +12,19 @@ export default function Navbar() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div className="bg-main border-4 border-border shadow-shadow p-6 w-full md:w-auto transform transition-transform hover:translate-x-1 hover:translate-y-1">
           <Link href="/">
-            <h1 className="text-4xl md:text-5xl font-heading text-mtext">Jerry's Portfolio</h1>
+            <h1 className="text-4xl md:text-5xl font-heading">Kartheesan's Portfolio</h1>
           </Link>
         </div>
         
-        <div className="flex items-center gap-4 w-full md:w-auto">
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex-1">
-            <Button 
-              variant="neutral" 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-full"
-            >
-              {isMenuOpen ? "Close Menu" : "Menu"}
-            </Button>
-          </div>
-          
-          {/* Theme Toggle (visible on all screen sizes) */}
-          <ThemeToggle />
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <Button 
+            variant="neutral" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="w-full"
+          >
+            {isMenuOpen ? "Close Menu" : "Menu"}
+          </Button>
         </div>
         
         {/* Desktop Nav */}
