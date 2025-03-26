@@ -43,7 +43,10 @@ cd altneobrut
 2. Install dependencies:
 ```bash
 npm install
-# or
+```
+OR
+
+```bash
 yarn install
 ```
 
@@ -55,7 +58,11 @@ Start the development server with Turbopack:
 
 ```bash
 npm run dev
-# or
+```
+
+OR
+
+```bash
 yarn dev
 ```
 
