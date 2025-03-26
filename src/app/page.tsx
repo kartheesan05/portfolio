@@ -52,10 +52,29 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className={getContentBoxClasses() + " flex items-center justify-center h-[400px]"}>
-            <div className="text-center">
-              <p className="text-lg mb-2">Profile Image</p>
-              <p className="text-sm">(Placeholder for your photo)</p>
+          <div className={getContentBoxClasses() + " flex items-center justify-center h-[400px] relative overflow-hidden"}>
+            <div className="w-full h-full bg-neutral-100 p-6 font-mono text-sm overflow-hidden">
+              <pre className="text-left">
+                <code className="text-xs md:text-sm">
+                  <span className="text-blue-600">const</span> <span className="text-green-600">Profile</span> = () =&gt; {'{'}
+                  <br />  <span className="text-blue-600">const</span> <span className="text-purple-600">skills</span> = [<span className="text-orange-600">'React'</span>, <span className="text-orange-600">'Next.js'</span>, <span className="text-orange-600">'TypeScript'</span>];
+                  <br />  <span className="text-blue-600">const</span> <span className="text-purple-600">learning</span> = [<span className="text-orange-600">'ML'</span>, <span className="text-orange-600">'Cloud'</span>];
+                  <br />
+                  <br />  <span className="text-blue-600">return</span> (
+                  <br />    &lt;<span className="text-green-600">div</span> <span className="text-purple-600">className</span>=<span className="text-orange-600">"profile"</span>&gt;
+                  <br />      &lt;<span className="text-green-600">h1</span>&gt;Kartheesan&lt;/<span className="text-green-600">h1</span>&gt;
+                  <br />      &lt;<span className="text-green-600">p</span>&gt;CS Student & Developer&lt;/<span className="text-green-600">p</span>&gt;
+                  <br />      {'{'}skills.<span className="text-yellow-600">map</span>(<span className="text-purple-600">skill</span> =&gt; (
+                  <br />        &lt;<span className="text-green-600">Badge</span> <span className="text-purple-600">key</span>={'{'}skill{'}'}&gt;{'{'}skill{'}'}&lt;/<span className="text-green-600">Badge</span>&gt;
+                  <br />      )){'}'}
+                  <br />    &lt;/<span className="text-green-600">div</span>&gt;
+                  <br />  );
+                  <br />{'}'}
+                </code>
+              </pre>
+              <div className="absolute bottom-6 right-6 text-lg font-bold text-gray-800 bg-main px-2 py-1 border-2 border-border shadow-neobrutalism rotate-3">
+                Hello, World!
+              </div>
             </div>
           </div>
         </div>
