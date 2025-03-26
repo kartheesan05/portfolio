@@ -115,4 +115,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🔗 Live Demo
 
-Visit the live portfolio at: [your-portfolio-url.com](https://kartheesan.online)
+Visit the live portfolio at: [kartheesan.online](https://kartheesan.online)
