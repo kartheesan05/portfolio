@@ -8,7 +8,8 @@ import ContactForm from "@/components/ContactForm";
 import { getTitleBoxClasses, getContentBoxClasses } from "@/lib/neobrutalism";
 import Link from "next/link";
 import { useToast } from '@/hooks/use-toast'
-
+import { motion } from "framer-motion";
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
 
@@ -28,6 +29,34 @@ export default function Home() {
     "TypeScript"
   ];
 
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const codeBlockAnimation = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { 
+        duration: 0.8,
+        delay: 0.2
+      } 
+    }
+  };
+
   return (
     <main className="min-h-screen bg-bg p-8 md:p-16">
       <Navbar />
@@ -35,24 +64,50 @@ export default function Home() {
       {/* Hero Section */}
       <section className="mb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col gap-6 justify-center">
+          <motion.div 
+            className="flex flex-col gap-6 justify-center"
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+          >
             <h2 className="text-6xl font-heading">
-            CS Student and <span className="bg-main px-2">Developer</span>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString('CS Student and <span class="bg-main px-2">Developer</span>')
+                    .start();
+                }}
+                options={{
+                  loop: false,
+                  cursor: '|',
+                  delay: 75,
+                }}
+              />
             </h2>
             <p className="text-xl">
               I build beautiful, interactive, and performant web applications 
               with a focus on user experience and modern design. I also have interests in machine learning.
             </p>
-            <div className="flex gap-4 mt-4">
+            <motion.div 
+              className="flex gap-4 mt-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
               <Link href="#projects">
                 <Button>View Projects</Button>
               </Link>
               <Link href="/resume.pdf" target="_blank">
                 <Button variant="neutral">Get Resume</Button>
               </Link>
-            </div>
-          </div>
-          <div className={getContentBoxClasses() + " flex items-center justify-center h-[400px] relative overflow-hidden"}>
+            </motion.div>
+          </motion.div>
+          <motion.div 
+            className={getContentBoxClasses() + " flex items-center justify-center h-[400px] relative overflow-hidden"}
+            variants={codeBlockAnimation}
+            initial="hidden"
+            animate="visible"
+          >
             <div className="w-full h-full bg-neutral-100 p-6 font-mono text-sm overflow-hidden">
               <pre className="text-left">
                 <code className="text-xs md:text-sm">
@@ -72,45 +127,85 @@ export default function Home() {
                   <br />{'}'}
                 </code>
               </pre>
-              <div className="absolute bottom-6 right-6 text-lg font-bold text-gray-800 bg-main px-2 py-1 border-2 border-border shadow-neobrutalism rotate-3">
+              <motion.div 
+                className="absolute bottom-6 right-6 text-lg font-bold text-gray-800 bg-main px-2 py-1 border-2 border-border shadow-neobrutalism rotate-3"
+                initial={{ rotate: -10, scale: 0 }}
+                animate={{ rotate: 3, scale: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 0.8,
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20 
+                }}
+              >
                 Hello, World!
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Featured Projects */}
-      <section id="projects" className="mb-24 scroll-mt-16">
+      <motion.section 
+        id="projects" 
+        className="mb-24 scroll-mt-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInUp}
+      >
         <div className={getTitleBoxClasses() + " mb-8"}>
           <h2 className="text-4xl font-heading">Featured Projects</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ProjectCard 
-            title="Coming Soon" 
-            description="Will be updated soon, check back later!" 
-            bgColor="#FFC0CB" 
-          />
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <motion.div variants={fadeInUp}>
+            <ProjectCard 
+              title="Coming Soon" 
+              description="Will be updated soon, check back later!" 
+              bgColor="#FFC0CB"
+            />
+          </motion.div>
           
-          <ProjectCard 
-            title="Coming Soon" 
-            description="Will be updated soon, check back later!" 
-            bgColor="#98FB98" 
-          />
+          <motion.div variants={fadeInUp}>
+            <ProjectCard 
+              title="Coming Soon" 
+              description="Will be updated soon, check back later!" 
+              bgColor="#98FB98"
+            />
+          </motion.div>
           
-          <ProjectCard 
-            title="Coming Soon" 
-            description="Will be updated soon, check back later!" 
-            bgColor="#ADD8E6" 
-          />
-        </div>
-      </section>
+          <motion.div variants={fadeInUp}>
+            <ProjectCard 
+              title="Coming Soon" 
+              description="Will be updated soon, check back later!" 
+              bgColor="#ADD8E6" 
+            />
+          </motion.div>
+        </motion.div>
+      </motion.section>
 
       {/* About Section */}
-      <section id="about" className="mb-24 scroll-mt-16">
+      <motion.section 
+        id="about" 
+        className="mb-24 scroll-mt-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInUp}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className={getContentBoxClasses()}>
+          <motion.div 
+            className={getContentBoxClasses()}
+            variants={fadeInUp}
+          >
             <h2 className="text-4xl font-heading mb-6">About Me</h2>
             <p className="mb-4">
               Hi there! I'm a pragmatic and technically oriented full-stack developer with a keen interest in cloud computing and web development. Currently pursuing B.E in Computer Science and Engineering at Sri Venkateswara College of Engineering.
@@ -121,31 +216,57 @@ export default function Home() {
             <p>
               I'm passionate about building innovative solutions, from web applications to machine learning projects. When I'm not coding, you can find me participating in hackathons, leading technical teams, and exploring new technologies in full-stack development.
             </p>
-          </div>
-          <div id="skills" className={getTitleBoxClasses() + " scroll-mt-16"}>
+          </motion.div>
+          <motion.div 
+            id="skills" 
+            className={getTitleBoxClasses() + " scroll-mt-16"}
+            variants={fadeInUp}
+          >
             <h2 className="text-4xl font-heading mb-6">Skills</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <motion.div 
+              className="grid grid-cols-2 gap-4"
+              variants={staggerContainer}
+            >
               {skills.map((skill, index) => (
-                <SkillBadge key={index} skill={skill} />
+                <motion.div 
+                  key={index} 
+                  variants={fadeInUp}
+                  custom={index}
+                >
+                  <SkillBadge skill={skill} />
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section id="contact" className="mb-16 scroll-mt-16">
+      <motion.section 
+        id="contact" 
+        className="mb-16 scroll-mt-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInUp}
+      >
         <div className={getTitleBoxClasses() + " mb-8"}>
           <h2 className="text-4xl font-heading">Get In Touch</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className={getContentBoxClasses()}>
+          <motion.div 
+            className={getContentBoxClasses()}
+            variants={fadeInUp}
+          >
             <p className="mb-6 text-xl">
               Interested in working together? Feel free to reach out through any of these channels.
             </p>
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-2">
+            <motion.div 
+              className="flex flex-col gap-4"
+              variants={staggerContainer}
+            >
+              <motion.div className="flex items-center gap-2" variants={fadeInUp}>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -171,8 +292,8 @@ export default function Home() {
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
                   </svg>
                 </button>
-              </div>
-              <div className="flex items-center gap-2">
+              </motion.div>
+              <motion.div className="flex items-center gap-2" variants={fadeInUp}>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -197,8 +318,8 @@ export default function Home() {
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
                   </svg>
                 </button>
-              </div>
-              <div className="flex items-center gap-2">
+              </motion.div>
+              <motion.div className="flex items-center gap-2" variants={fadeInUp}>
                 <a href="https://linkedin.com/in/kartheesan05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -209,8 +330,8 @@ export default function Home() {
                   </div>
                   <span>linkedin.com/in/kartheesan05</span>
                 </a>
-              </div>
-              <div className="flex items-center gap-2">
+              </motion.div>
+              <motion.div className="flex items-center gap-2" variants={fadeInUp}>
                 <a href="https://github.com/kartheesan05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-main border-2 border-border flex items-center justify-center">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -219,18 +340,27 @@ export default function Home() {
                   </div>
                   <span>github.com/kartheesan05</span>
                 </a>
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
           
-          <div className={getContentBoxClasses()}>
+          <motion.div 
+            className={getContentBoxClasses()}
+            variants={fadeInUp}
+            transition={{ delay: 0.2 }}
+          >
             <ContactForm />
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
-      <footer className={getTitleBoxClasses()}>
+      <motion.footer 
+        className={getTitleBoxClasses()}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-lg font-heading">© {new Date().getFullYear()} Kartheesan's Portfolio</p>
           <div className="flex gap-4">
@@ -246,7 +376,7 @@ export default function Home() {
             {/* <Button variant="reverse" size="sm">Twitter</Button> */}
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </main>
   );
 }
