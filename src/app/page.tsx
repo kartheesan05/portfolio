@@ -364,15 +364,21 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-lg font-heading">© {new Date().getFullYear()} Kartheesan's Portfolio</p>
           <div className="flex gap-4">
-            <Button variant="reverse" size="sm">
-              <a href="https://github.com/kartheesan05" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </Button>
-            <Button variant="reverse" size="sm">
-              <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </Button>
-            <Button variant="reverse" size="sm">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-            </Button>
+            <a href="https://github.com/kartheesan05" target="_blank" rel="noopener noreferrer">
+              <Button variant="reverse" size="sm">
+                GitHub
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/kartheesan05/" target="_blank" rel="noopener noreferrer">
+              <Button variant="reverse" size="sm">
+                LinkedIn
+              </Button>
+            </a>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Button variant="reverse" size="sm">
+                Resume
+              </Button>
+            </a>
             {/* <Button variant="reverse" size="sm">Twitter</Button> */}
           </div>
         </div>
