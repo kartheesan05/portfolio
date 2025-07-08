@@ -9,7 +9,7 @@ import { getTitleBoxClasses, getContentBoxClasses } from "@/lib/neobrutalism";
 import Link from "next/link";
 import { useToast } from '@/hooks/use-toast'
 import { motion } from "framer-motion";
-import Typewriter from 'typewriter-effect';
+import { ReactTyped } from 'react-typed';
 
 export default function Home() {
 
@@ -71,17 +71,12 @@ export default function Home() {
             variants={fadeInUp}
           >
             <h2 className="text-6xl font-heading">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString('CS Student and <span class="bg-main px-2">Developer</span>')
-                    .start();
-                }}
-                options={{
-                  loop: false,
-                  cursor: '|',
-                  delay: 75,
-                }}
+              <ReactTyped
+                strings={['CS Student and <span class="bg-main px-2">Developer</span>']}
+                typeSpeed={75}
+                showCursor={true}
+                cursorChar="|"
+                loop={false}
               />
             </h2>
             <p className="text-xl">
