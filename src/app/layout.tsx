@@ -1,17 +1,21 @@
+import type { Metadata } from "next";
+import { Chivo_Mono, Syne } from "next/font/google";
 import "./globals.css";
-import { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
-import { Toaster } from "@/components/ui/toaster";
 
-const spaceGrotesk = Space_Grotesk({
+const fontSyne = Syne({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
+  variable: "--font-syne-stack",
+});
+
+const fontMono = Chivo_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono-stack",
 });
 
 export const metadata: Metadata = {
-  title: "Kartheesan's Portfolio",
-  description: "Personal portfolio website showcasing projects and skills",
+  title: "Kartheesan — Portfolio",
+  description:
+    "CS Student & Full-Stack Engineer specializing in React, Golang, and Node.js.",
 };
 
 export default function RootLayout({
@@ -20,10 +24,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`antialiased ${spaceGrotesk.variable} font-sans bg-bg`}>
-        {children}
-        <Toaster />
+    <html
+      lang="en"
+      className={`${fontSyne.variable} ${fontMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full">
+        <div className="relative w-full min-h-screen bg-bg text-fg selection:bg-accent selection:text-bg">
+          <div className="bg-noise" aria-hidden />
+          {children}
+        </div>
       </body>
     </html>
   );
