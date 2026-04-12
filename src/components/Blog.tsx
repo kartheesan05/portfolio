@@ -29,7 +29,7 @@ export default function Blog() {
             </div>
             <div className="md:col-span-6">
               <h3 className="font-syne text-3xl md:text-4xl mb-4 group-hover:text-accent transition-colors">
-                Rebuilding Student Buddy — From Outdated UI to Material 3
+                Rebuilding Student Companion App — From Outdated UI to Material 3
               </h3>
               <div className="flex gap-3 mt-6">
                 <span className="font-mono text-xs px-3 py-1 border border-gray-800 rounded-full">

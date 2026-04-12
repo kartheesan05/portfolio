@@ -70,7 +70,7 @@ export default function BlogPost() {
           </div>
 
           <h1 className="font-syne text-[6vw] leading-[0.9] tracking-tighter uppercase mb-12">
-            Rebuilding Student Buddy
+            Rebuilding Student Companion App
           </h1>
 
           <div className="flex items-center gap-4 font-mono text-sm text-gray-500 mb-12 pb-8 border-b border-gray-800">
@@ -113,8 +113,8 @@ export default function BlogPost() {
               The Problem with the Old App
             </h2>
             <p>
-              The original student companion app — what I called the &ldquo;Student
-              Diary&rdquo; — worked. It tracked your schedule and attendance. But the
+              The original student companion app, the &ldquo;SVCE Student Diary&rdquo;, worked. 
+              It tracked your schedule and attendance. But the
               UI was a relic. Hard-coded colors, flat layouts with no visual
               hierarchy, and a design language that felt stuck in the Android 4.x
               era. It was functional, but nobody wanted to look at it.
