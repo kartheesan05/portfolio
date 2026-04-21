@@ -103,26 +103,37 @@ export default function StudentBuddy() {
 
           <div className="font-mono text-base md:text-lg leading-relaxed text-gray-300 space-y-8 max-w-3xl">
             <p className="text-xl text-gray-200 leading-relaxed">
-              Every student needs a reliable companion app — something to track
-              attendance, manage courses, and keep academics organized. I had one,
-              but it was showing its age. So I rebuilt it from scratch as Student
-              Buddy, powered by Material 3 and dynamic theming.
+              Every student needs that one app they keep coming back to — to check
+              attendance, courses, schedules, all of that. I already had one, but
+              over time it just started to feel... outdated. It worked, sure, but
+              using it wasn&apos;t exactly pleasant.
+            </p>
+            <p>
+              So I decided to rebuild it from scratch as <b>Student Buddy</b>,
+              this time focusing just as much on how it feels as how it works.
             </p>
 
             <h2 className="font-syne text-3xl text-white uppercase mt-16 mb-6">
               The Problem with the Old App
             </h2>
             <p>
-              The original student companion app, the &ldquo;SVCE Student Diary&rdquo;, worked. 
-              It tracked your schedule and attendance. But the
-              UI was a relic. Hard-coded colors, flat layouts with no visual
-              hierarchy, and a design language that felt stuck in the Android 4.x
-              era. It was functional, but nobody wanted to look at it.
+              The old app, &ldquo;SVCE Student Diary&rdquo;, did what it was supposed to do. You
+              could check your schedule, track attendance — the basics were
+              covered.
             </p>
             <p>
-              The navigation was clunky, the information density was overwhelming,
-              and there was zero personality. It did the job, but it felt like a
-              chore to use — the exact opposite of what a daily-use app should be.
+              But everything else felt stuck in the past.
+            </p>
+            <p>
+              The UI had hard-coded colors, flat layouts, and no real sense of
+              structure. It looked like something straight out of the Android 4.x
+              days. On top of that, navigation felt clunky and the screens were
+              packed with too much information at once.
+            </p>
+            <p>
+              It wasn&apos;t broken, but it wasn&apos;t something you&apos;d <i>want</i> to use
+              either. And for an app you open almost every day, that matters more
+              than you&apos;d think.
             </p>
           </div>
 
@@ -147,20 +158,20 @@ export default function StudentBuddy() {
               Enter Material 3 &amp; Dynamic Color
             </h2>
             <p>
-              Android&apos;s Material 3 design system was the perfect foundation for
-              the rebuild. The standout feature? Dynamic color. On Android 12 and
-              above, the app automatically derives its entire color palette from
-              the user&apos;s wallpaper. That means Student Buddy feels personal from
-              the moment you open it — the accent colors, surfaces, and containers
-              all harmonize with whatever wallpaper you&apos;re running.
+              When I started rebuilding, Material 3 felt like the obvious choice.
             </p>
             <p>
-              Beyond theming, Material 3 gave me the design vocabulary to create
-              clear visual hierarchy. Large top app bars, segmented buttons,
-              filled tonal buttons, and proper surface elevation all make the
-              interface intuitive without needing a tutorial.
+              The biggest win was dynamic color. On Android 12+, the app
+              automatically picks up colors from your wallpaper and builds the
+              entire theme around it. It sounds like a small thing, but it makes
+              the app feel way more personal right away.
             </p>
-
+            <p>
+              Beyond that, Material 3 gave me a solid design system to work with
+              — better hierarchy, cleaner layouts, and components that actually
+              guide the user instead of confusing them. Things like large top
+              bars, proper spacing, and clearer grouping made a huge difference.
+            </p>
           </div>
 
           <div className="my-16">
@@ -200,17 +211,19 @@ export default function StudentBuddy() {
               The Verdict
             </h2>
             <p>
-              Rebuilding the student companion app as Student Buddy wasn&apos;t just
-              about making it pretty — though it certainly is now. It was about
-              respecting the user&apos;s time and taste. Material 3&apos;s dynamic
-              theming makes the app feel native to every device, and the
-              redesigned information architecture means students spend less time
-              navigating and more time staying on top of their academics.
+              Rebuilding this app wasn&apos;t just about making it look better — it
+              was about making it <i>feel</i> better to use.
             </p>
             <p>
-              If you&apos;re a student looking for a clean, modern companion app —
-              or just want to see Material 3 dynamic theming in action — give
-              it a try.
+              Now it actually feels like something that belongs on your phone,
+              not something you&apos;re forced to open. Navigation is simpler,
+              information is easier to scan, and overall it just gets out of your
+              way.
+            </p>
+            <p>
+              If you&apos;re a student and want something clean and modern to keep
+              track of your academics — or if you&apos;re just curious about Material
+              3 in action — give it a try.
             </p>
           </div>
 
@@ -221,7 +234,7 @@ export default function StudentBuddy() {
                   Download Student Buddy
                 </h3>
                 <p className="font-mono text-sm text-gray-400">
-                  Available for Android — free and open source.
+                  Available for Android — free and open source
                 </p>
               </div>
               <div className="flex gap-4 shrink-0">
