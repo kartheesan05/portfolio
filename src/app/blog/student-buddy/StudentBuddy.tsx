@@ -227,8 +227,11 @@ export default function StudentBuddy() {
             </p>
           </div>
 
-          <div id="download" className="my-16 p-8 border border-gray-800 rounded-sm bg-gray-900/50">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div
+            id="download"
+            className="my-16 p-6 sm:p-8 border border-gray-800 rounded-sm bg-gray-900/50"
+          >
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
               <div>
                 <h3 className="font-syne text-2xl text-white mb-2">
                   Download Student Buddy
@@ -237,12 +240,12 @@ export default function StudentBuddy() {
                   Available for Android — free and open source
                 </p>
               </div>
-              <div className="flex gap-4 shrink-0">
+              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
                 <a
                   href="https://github.com/kartheesan05/svce-student-buddy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 border border-gray-700 text-gray-300 font-mono text-sm uppercase tracking-widest hover:border-accent hover:text-accent transition-colors rounded-sm"
+                  className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-4 border border-gray-700 text-gray-300 font-mono text-sm uppercase tracking-widest hover:border-accent hover:text-accent transition-colors rounded-sm"
                 >
                   <Code className="w-4 h-4" />
                   View Source
@@ -251,7 +254,7 @@ export default function StudentBuddy() {
                   href="https://github.com/kartheesan05/svce-student-buddy/releases/latest"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-bg font-mono text-sm uppercase tracking-widest hover:opacity-90 transition-opacity rounded-sm"
+                  className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-4 bg-accent text-bg font-mono text-sm uppercase tracking-widest hover:opacity-90 transition-opacity rounded-sm"
                 >
                   <Download className="w-4 h-4" />
                   Download APK
