@@ -11,9 +11,12 @@ export default function Blog() {
         <h2 className="font-syne text-[8vw] leading-none uppercase tracking-tighter">
           Insights
         </h2>
-        <button className="font-mono text-sm uppercase tracking-widest hover:text-accent transition-colors pb-2 border-b border-gray-700 hover:border-accent">
+        <Link
+          href="/blog"
+          className="font-mono text-sm uppercase tracking-widest hover:text-accent transition-colors pb-2 border-b border-gray-700 hover:border-accent"
+        >
           Read All Articles
-        </button>
+        </Link>
       </div>
 
       <Link href="/blog/student-buddy" className="block">
