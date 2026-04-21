@@ -35,8 +35,8 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/kartheesan05/" className="hover:text-white transition-colors">
             LinkedIn
           </a>
-          <a href="https://x.com/kartheesan05" className="hover:text-white transition-colors">
-            Twitter
+          <a href="/resume.pdf" className="hover:text-white transition-colors">
+            Resume
           </a>
         </div>
       </div>
