@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Chivo_Mono, Syne } from "next/font/google";
 import "./globals.css";
 
+const siteUrl = "https://kartheesan.dev";
+
 const fontSyne = Syne({
   subsets: ["latin"],
   variable: "--font-syne-stack",
@@ -13,6 +15,7 @@ const fontMono = Chivo_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Kartheesan — Portfolio",
   description:
     "CS Student & Full-Stack Engineer specializing in React, Golang, and Node.js.",
