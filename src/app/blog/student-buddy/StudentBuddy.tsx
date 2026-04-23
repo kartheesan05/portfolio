@@ -45,11 +45,11 @@ export default function StudentBuddy() {
     <div className="min-h-screen flex flex-col">
       <div className="grow px-6 md:px-12 pt-12 pb-32 max-w-5xl mx-auto w-full">
         <Link
-          href="/"
+          href="/blog"
           className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-widest hover:text-accent transition-colors mb-20 group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />{" "}
-          Back to Portfolio
+          Back to Blog
         </Link>
 
         <motion.div
