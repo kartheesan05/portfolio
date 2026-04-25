@@ -85,8 +85,7 @@ export default function StudentBuddy() {
 
           <a
             href={downloadLink}
-            target="_blank"
-            rel="noopener noreferrer"
+            download
             className="flex items-center gap-4 mb-20 px-6 py-4 border border-gray-800 rounded-sm bg-gray-900/50 hover:border-accent/50 transition-colors group"
           >
             <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center shrink-0">
@@ -254,8 +253,7 @@ export default function StudentBuddy() {
                 </a>
                 <a
                   href={downloadLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download
                   className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-4 bg-accent text-bg font-mono text-sm uppercase tracking-widest hover:opacity-90 transition-opacity rounded-sm"
                 >
                   <Download className="w-4 h-4" />
