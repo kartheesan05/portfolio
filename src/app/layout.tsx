@@ -16,6 +16,9 @@ const fontMono = Chivo_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: "/favicon.png",
+  },
   title: "Kartheesan — Portfolio",
   description:
     "CS Student & Full-Stack Engineer specializing in React, Golang, and Node.js.",
